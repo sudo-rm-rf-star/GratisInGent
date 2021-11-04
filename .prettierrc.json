@@ -1,0 +1,13 @@
+{
+  "singleQuote": true,
+  "endOfLine": "auto",
+  "trailingComma": "all",
+  "semi": true,
+  "printWidth": 100,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": { "singleQuote": false, "printWidth": 120 }
+    }
+  ]
+}

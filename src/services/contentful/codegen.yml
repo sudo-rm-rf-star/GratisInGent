@@ -1,0 +1,9 @@
+overwrite: true
+documents: null
+schema:
+  - "https://graphql.contentful.com/content/v1/spaces/${NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/${NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT_ID}?access_token=${NEXT_PUBLIC_CONTENTFUL_DELIVERY_API_TOKEN}":
+      method: GET
+generates:
+  src/services/contentful/types.ts:
+    plugins:
+    - typescript
