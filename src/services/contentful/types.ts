@@ -177,6 +177,7 @@ export type ContentTypeLocation = Entry & {
   location?: Maybe<Location>;
   name?: Maybe<Scalars['String']>;
   sys: Sys;
+  url?: Maybe<Scalars['String']>;
 };
 
 
@@ -194,6 +195,12 @@ export type ContentTypeLocationLocationArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/lor63zd1pfq0/content_types/location) */
 export type ContentTypeLocationNameArgs = {
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/lor63zd1pfq0/content_types/location) */
+export type ContentTypeLocationUrlArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
@@ -220,6 +227,13 @@ export type ContentTypeLocationFilter = {
   name_not_contains?: Maybe<Scalars['String']>;
   name_not_in?: Maybe<Array<Maybe<Scalars['String']>>>;
   sys?: Maybe<SysFilter>;
+  url?: Maybe<Scalars['String']>;
+  url_contains?: Maybe<Scalars['String']>;
+  url_exists?: Maybe<Scalars['Boolean']>;
+  url_in?: Maybe<Array<Maybe<Scalars['String']>>>;
+  url_not?: Maybe<Scalars['String']>;
+  url_not_contains?: Maybe<Scalars['String']>;
+  url_not_in?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type ContentTypeLocationLinkingCollections = {
@@ -254,7 +268,9 @@ export enum ContentTypeLocationOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  UrlAsc = 'url_ASC',
+  UrlDesc = 'url_DESC'
 }
 
 export type ContentfulMetadata = {
@@ -659,4 +675,11 @@ export type CfContentTypeLocationNestedFilter = {
   name_not_contains?: Maybe<Scalars['String']>;
   name_not_in?: Maybe<Array<Maybe<Scalars['String']>>>;
   sys?: Maybe<SysFilter>;
+  url?: Maybe<Scalars['String']>;
+  url_contains?: Maybe<Scalars['String']>;
+  url_exists?: Maybe<Scalars['Boolean']>;
+  url_in?: Maybe<Array<Maybe<Scalars['String']>>>;
+  url_not?: Maybe<Scalars['String']>;
+  url_not_contains?: Maybe<Scalars['String']>;
+  url_not_in?: Maybe<Array<Maybe<Scalars['String']>>>;
 };

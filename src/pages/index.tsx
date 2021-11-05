@@ -15,6 +15,7 @@ const EVENTS_QUERY = gql`
         startTime
         location {
           name
+          url
           location {
             lat
             lon

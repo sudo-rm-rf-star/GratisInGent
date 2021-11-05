@@ -42,7 +42,15 @@ const EventCard = ({ event }: Props): JSX.Element => {
       <span className="uppercase font-bold">
         <span>{timeTitle(event.startTime)}</span>
         {' > '}
-        <span className="underline">{event.location?.name}</span>
+        <span>
+          {event.location?.url ? (
+            <a className="underline" href={event.location.url}>
+              {event.location?.name}
+            </a>
+          ) : (
+            <>{event.location?.name}</>
+          )}{' '}
+        </span>
         {' > '}
         <span>{event.title}</span>
         {' : '}
