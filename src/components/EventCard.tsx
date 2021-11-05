@@ -16,7 +16,7 @@ const renderDescription = (description: string): JSX.Element => {
   let stringElement = description;
   // eslint-disable-next-line no-restricted-syntax
   for (const match of matches) {
-    let insidePart;
+    let insidePart = match[1];
     switch (match[1].toLowerCase()) {
       case 'website':
         insidePart = `<img src="/images/globe.png" alt="globe" style="display:inline;"/>`;
@@ -25,11 +25,11 @@ const renderDescription = (description: string): JSX.Element => {
         insidePart = `<img src="/images/facebook.jpg" alt="facebook" style="display:inline;"/>`;
         break;
       default:
-        insidePart = match[1].substring(1, match[1].length);
+        break;
     }
     stringElement = stringElement.replace(
       match[0],
-      `<a className="inline" href="${match[2].substring(1, match[2].length)}">${insidePart}</a>`,
+      `<a className="inline" href="${match[2]}">${insidePart}</a>`,
     );
   }
   // eslint-disable-next-line react/no-danger
